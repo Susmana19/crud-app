@@ -122,7 +122,6 @@ let newProduct = ref({
 
 watch(name, (value) => {
   newProduct.value.name = value;
-  console.log(value);
 });
 watch(price, (value) => {
   newProduct.value.price = value;
