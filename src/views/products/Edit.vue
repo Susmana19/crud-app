@@ -48,7 +48,7 @@
             <input
               v-model="name"
               type="text"
-              name=""
+              name="productName"
               id="product-name"
               class="border-b-2 border-[#4F5665] text-xl py-2 focus:outline-none"
               placeholder="Type a product name"
@@ -61,7 +61,7 @@
             <input
               v-model="price"
               type="text"
-              name=""
+              name="productPrice"
               id="product-price"
               class="border-b-2 border-[#4F5665] text-xl py-2 focus:outline-none"
               placeholder="Type the price in thousand (K)"
@@ -72,6 +72,8 @@
               >Select Category :</label
             >
             <select
+              name="productCategory"
+              id="product-category"
               v-model="category"
               class="select select-bordered w-full max-w-xs text-xl"
             >
@@ -82,6 +84,7 @@
               <option value="add-on" class="text-xl">Add On</option>
             </select>
             <button
+              id="form-submit"
               type="submit"
               class="text-center cursor-pointer hover:text-[#6A4029] hover:bg-[#FFBA33] px-5 py-3 text-xl font-bold rounded-md bg-[#6A4029] text-[#FFBA33]"
             >

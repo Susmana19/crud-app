@@ -22,23 +22,28 @@
           <img
             :src="`${imageUrl}/${images[0].filename}`"
             :alt="images[0].name"
-            class="w-36 h-36 rounded-full border-amber-700 border-4 mt-3 border-double"
+            class="product-image w-36 h-36 rounded-full border-amber-700 border-4 mt-3 border-double"
           />
         </figure>
         <div class="card-body">
           <h2
-            class="card-title justify-center text-center font-poppins text-xl font-black"
+            class="product-name card-title justify-center text-center font-poppins text-xl font-black"
           >
             {{ name }}
           </h2>
-          <p class="text-center font-semibold text-xl font-poppins">
+          <p
+            class="product-price text-center font-semibold text-xl font-poppins"
+          >
             {{ price }} K
           </p>
           <div class="card-actions justify-start">
-            <div class="badge badge-outline">{{ category }}</div>
+            <div class="product-category badge badge-outline">
+              {{ category }}
+            </div>
           </div>
           <div class="flex justify-between mt-3">
             <button
+              :id="`edit-${index}`"
               @click="
                 router.push({
                   name: `product.edit`,
@@ -51,6 +56,7 @@
             </button>
             <button
               @click.prevent="deleteProduct(id, index)"
+              :id="`delete-${index}`"
               class="bg-red-700 shadow-md hover:bg-rose-500 shadow-red-700/70 w-20 rounded-md px-5 py-2 text-white font-semibold"
             >
               Delete

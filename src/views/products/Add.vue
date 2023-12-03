@@ -73,6 +73,7 @@
             >
             <select
               @change="selectedCategory"
+              id="product-category"
               class="select select-bordered w-full max-w-xs text-xl"
             >
               <option disabled selected class="text-xl">Choose Category</option>
@@ -83,6 +84,7 @@
             </select>
 
             <button
+              id="form-submit"
               type="submit"
               class="text-center cursor-pointer hover:text-[#6A4029] hover:bg-[#FFBA33] px-5 py-3 text-xl font-bold rounded-md bg-[#6A4029] text-[#FFBA33]"
             >
